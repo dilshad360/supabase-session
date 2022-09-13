@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Supabase session</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="p-5">
+        <form class="container col-4" id="contact-form">
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" required name="name" class="form-control">
+                <label class="form-label">Email</label>
+                <input type="email" required name="email" class="form-control">
+                <label class="form-label">Subject</label>
+                <input type="text" class="form-control" name="subject">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" required rows="6" name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <section class="container">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+          </table>
+    </section>
+
+    
+
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
